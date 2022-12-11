@@ -92,7 +92,7 @@ data%>%autoplot(Theft,color="purple")+labs(y = "Theft",x="Month")
 
 ```{r}
 data<-tsibble::fill_gaps(data)
-data %>% gg_season(Theft,period="month",labels = "both") 
+data %>% gg_season(Theft,period="month",labels = "both") +labs(y = "Theft",x="week", title = "Seasonal plot: Theft")
 ```
 
 
